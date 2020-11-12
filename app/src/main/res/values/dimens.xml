@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="line_chart_width">270dp</dimen>
+    <dimen name="line_chart_height">200dp</dimen>
+    <dimen name="margin_start">24dp</dimen>
+</resources>

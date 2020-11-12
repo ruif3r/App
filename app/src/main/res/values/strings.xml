@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Gif &amp; Light Sensor</string>
+    <string name="random_button">Random</string>
+    <string name="light_sensor_not_available">Your device doesn\'t have a light sensor, this app feature is incompatible with your device!</string>
+</resources>
