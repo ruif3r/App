@@ -28,10 +28,14 @@ class LightSensorGraphActivity : AppCompatActivity(), SensorEventListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_light_sensor_graph)
+        initView()
+        getDeviceLightSensor()
+    }
+
+    private fun initView() {
         lightSensorValues = findViewById(R.id.light_sensor_values_text_view)
         lineChart = findViewById(R.id.lineChart)
         val freezeButton = findViewById<Button>(R.id.light_sensor_activity_freeze_button)
-        getDeviceLightSensor()
         freezeButton.setOnClickListener {
             isLightSensorActive = if (isLightSensorActive) {
                 sensorManager.unregisterListener(this)
@@ -70,11 +74,11 @@ class LightSensorGraphActivity : AppCompatActivity(), SensorEventListener {
     ) {
         entries.add(
             Entry(
-                currentValueTimeStamp.minus((timeDifference.toFloat())).div(1000),
+                currentValueTimeStamp.minus((timeDifference.toFloat())),
                 currentValue.toFloat()
             )
         )
-        val lineDataSet = LineDataSet(entries, "Illuminance")
+        val lineDataSet = LineDataSet(entries, getString(R.string.illuminance))
         val iLineDataSet = ArrayList<ILineDataSet>().apply { add(lineDataSet) }
         lineChart?.data = LineData(iLineDataSet)
         lineChart?.invalidate()

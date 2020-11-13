@@ -91,6 +91,7 @@ class MainActivityViewModelTest {
 
     }
 
+    @ExperimentalCoroutinesApi
     @After
     fun afterTests() {
         Dispatchers.resetMain()

@@ -5,4 +5,6 @@
     <dimen name="margin_start">24dp</dimen>
     <dimen name="gif_width">250dp</dimen>
     <dimen name="gif_height">300dp</dimen>
+    <dimen name="margin_top_freeze_button">64dp</dimen>
+    <dimen name="margin_top_random_button">32dp</dimen>
 </resources>
